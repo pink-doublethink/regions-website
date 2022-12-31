@@ -1,9 +1,9 @@
 ----
 ### What is the project about?
 ---
-- This is my personal website repository. In the future, I plan to make a blog about front-end development out of it with information about myself.
+- This repository contains a website code that provides general information about the countries of the world. The project was created as part of co-creation with the Frontend mentor community.
 
-- In this project I implemented: theme switcher; work with an external API for sending letters.
+- In this project I implemented: theme switcher; work with external API.
 
 ---
 ### How to install and run a project

@@ -1,0 +1,128 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: #fff;
+  z-index: -6;
+}
+
+.header__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4em;
+  font-weight: var(--fw-3);
+}
+
+.header__toggleMode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  min-height: 95px;
+}
+
+.header__toggleBtn img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.header__toggleMode span {
+  font-size: 1.05em;
+  font-weight: var(--fw-3);
+}
+
+.header__toggleBtn {
+  background: transparent;
+  width: 40px;
+  height: 40px;
+}
+
+.switcher {
+    position: relative;
+    /* bottom: 36px;
+    left: 50%; */
+    margin: 0;
+    margin-left: -50px;
+    padding: 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: none;
+  }
+  
+  /* Switcher Legend */
+  
+  .switcher__leg {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /* Switcher Radio */
+  
+  .switcher__radio {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    width: 32px;
+    height: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    transition: filter 0.1s ease-in;
+  }
+  
+  .switcher__radio:focus {
+    outline: none;
+  }
+  
+  .switcher__radio_light {
+    background-image: url('../assets/img/light.svg');
+  }
+  
+  .switcher__radio_auto {
+    background-image: url('../assets/img/auto.svg');
+  }
+  
+  .switcher__radio_dark {
+    background-image: url('../assets/img/dark.svg');
+  }
+  
+  /* Switcher Status */
+  
+  .switcher__status {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    box-shadow: 0 0 0 2px rgb(0 0 0 / 0.2);
+    border-radius: 18px;
+    background-color: rgb(255 255 255 / 0.5);
+    background-repeat: no-repeat;
+    background-image: url('../assets/img/status.svg');
+    background-size: 32px;
+    background-position: center;
+    transition: background-position 0.1s ease-in;
+  }
+  
+  .switcher__radio:focus-visible ~ .switcher__status {
+    box-shadow: 0 0 0 2px black;
+  }
+  
+  .switcher__radio_light:checked ~ .switcher__status {
+    background-position: left 2px center;
+  }
+  
+  .switcher__radio_auto:checked ~ .switcher__status {
+    background-position: center center;
+  }
+  
+  .switcher__radio_dark:checked ~ .switcher__status {
+    background-position: right 2px center;
+  }

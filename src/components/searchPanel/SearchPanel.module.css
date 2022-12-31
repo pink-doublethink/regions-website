@@ -1,0 +1,113 @@
+.countryList__search {
+  grid-area: search;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: var(--mode-background);
+  margin-left: 50px;
+}
+
+.search__panel {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    width: 60px;
+    overflow: hidden;
+    transition: 0.5s;
+    background: var(--mode-elements);
+    box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search__panel.active {
+    width: 540px;
+  }
+  
+  .search__search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: var(--mode-text);
+  }
+  
+  .search__close {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.25em;
+    transition: 0.5s;
+    scale: 0;
+  }
+  
+  .search__panel.active .search__close {
+    scale: 1;
+    transition-delay: 0.5s;
+  }
+  
+  .search__img {
+    min-width: 60px;
+    height: 60px;
+  }
+  
+  .search__inputBox input {
+    width: 400px;
+    height: 60px;
+    background: var(--mode-elements);
+    color: var(--mode-text);
+    border: none;
+    outline: none;
+    font-size: 1.1em;
+  }
+  
+  .search__inputBox input::placeholder { 
+    color: var(--mode-text);
+  }
+  
+  .search__img img{
+    height: 67%;
+    width: 67%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  
+  .search__selecter {
+    position: absolute;
+    top: 19px;
+    right: 15%;
+    height: 60px;
+    width: 120px;
+    display: flex;
+    margin: 0 auto;
+    background-color: var(--mode-background);
+    box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .search__selecter select:invalid:not(:focus) {
+    color: var(--mode-text);
+  }
+  .search__selecter select:invalid:focus {
+    color: transparent;
+  }
+  .search__selecter select:focus option {
+    color: initial;
+  }
+  
+  .search__selecter select {
+    height: 100%;
+    width: 100%;
+    font-size: 1.1em;
+    font-family: cursive, sans-serif;
+    outline: 0;
+    background: var(--mode-elements);
+    border: 1px solid #222;
+    padding: 4px;
+    border-radius: 9px;
+  }
