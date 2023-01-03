@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Header from './components/Header/Header'
-import styles from './App.module.css'
-import SearchPanel from './components/searchPanel/SearchPanel';
+import Header from '../components/Header/Header'
+import styles from './styles/App.module.css'
+import SearchPanel from '../components/searchPanel/SearchPanel';
 
 const getData = async (url: string) => {
   const response = await fetch(url);
