@@ -1,28 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Header from '../components/Header/Header'
 import styles from '../styles/App.module.css'
 import SearchPanel from '../components/searchPanel/SearchPanel';
 
-const getData = async (url: string) => {
+export const getData = async (url: string) => {
   const response = await fetch(url);
-  if (!response.ok) {
-    throw new Error(`Could not fetch ${url}, status: ${response.status}`);
-  }
-  return await response.json();
+  return await response.json()
+}
+interface Country {
+  flags: any,
+  common: string
+  population: number
+  region: string
+  capital: string[]
+}
+interface Props {
+  countries: Country[]
 }
 
-function App() {
-  const [data, setData] = useState(null);
+const App: React.FC<Props> = ({ countries }) => {
+  const [data, setData] = useState(countries);
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const result = await getData('https://restcountries.com/v3.1/all');
-        setData(result);
-      } catch (error) {
-        console.error(error);
-      }
+      const result = await getData('https://restcountries.com/v3.1/all');
+      setData(result);
     };
+
     fetchData();
   }, ['https://restcountries.com/v3.1/all']);
 
@@ -33,7 +37,7 @@ function App() {
         <SearchPanel />
         <div className={styles.countryList__box}>
           <ul className={styles.countryList__items}>
-            {data &&
+            {data  &&
               data.map(({ flags, common, population, region, capital }) => (
                 <div className={styles.countryList__item}>
                   <img  src={flags.png} alt="dgdfg" width={400} height={400} className={styles.countryList__img}/>
