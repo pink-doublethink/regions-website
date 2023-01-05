@@ -1,6 +1,6 @@
 import styles from "./CountryPage.module.css";
 
-const CountryPage =()=>{
+const CountryPage: React.FC =()=>{
     return(
         <div>
             <p></p>

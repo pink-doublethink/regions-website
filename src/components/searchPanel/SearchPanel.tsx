@@ -1,6 +1,6 @@
 import styles from "./SearchPanel.module.css";
 
-const SearchPanel =()=>{
+const SearchPanel: React.FC =()=>{
     return(
         <div className={styles.countryList__search}>
 
