@@ -6,16 +6,14 @@
 - In this project I implemented: theme switcher; work with external API.
 
 ---
-### How to install and run a project
----
-**1.** Clone the repository on your computer;
+## Install and run commands
+----
 
-**2.** Install project dependencies;
-```shell
-pnpm install
-```
+Clone the repository on your computer. Then run the following commands from the root of the project, from the terminal:
 
-**3.** Run project in development mode;
-```shell
-pnpm run dev
+| Command                | Action                                             |
+| :--------------------- | :------------------------------------------------- |
+| `pnpm install`          | Installs dependencies                              |
+| `pnpm start`          | Starts local dev server at `localhost:5000`        |
+| `pnpm build`        | Build your production site to `./dist/   
 ```
