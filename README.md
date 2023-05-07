@@ -16,4 +16,3 @@ Clone the repository on your computer. Then run the following commands from the 
 | `pnpm install`          | Installs dependencies                              |
 | `pnpm start`          | Starts local dev server at `localhost:5000`        |
 | `pnpm build`        | Build your production site to `./dist/   
-```
