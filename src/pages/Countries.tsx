@@ -12,7 +12,7 @@ export default function Countries(): JSX.Element {
   const [filtered, setFiltered] = useState<Country[]>([]);
   const [searchInput, setSearchInput] = useState<string>("");
 
-  const fetchCountries = async (): Promise<void> => {
+  const fetchCountries = async (items?: void): Promise<void> => {
     try {
       const response = await fetch(url);
       const data = await response.json();
@@ -25,7 +25,7 @@ export default function Countries(): JSX.Element {
 
   useEffect(() => {
     let mounted = true;
-    fetchCountries().then((items) => {
+    fetchCountries().then((items: void) => {
       if (mounted) {
         fetchCountries(items);
       }

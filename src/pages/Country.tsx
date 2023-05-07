@@ -26,17 +26,17 @@ export default function Country(): JSX.Element {
   const [country, setCountry] = useState<Country | null>(null);
   const [borderCountries, setBorderCountries] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const { name } = useParams<{ name: string }>();
+  const { name } = useParams<{ name: any}>();
 
   useEffect(() => {
     window.scroll(0, 0);
-    const fetchCountryData = async (name: string) => {
+    const fetchCountryData = async (name: void) => {
       try {
         const url = `https://restcountries.com/v2/name/${name}`;
         const response = await fetch(url);
         const data = await response.json();
         setCountry(data[0]);
-        data[0]?.borders?.forEach((border) => {
+        data[0]?.borders?.forEach((border: string) => {
           return findCountryData(border);
         });
         setIsLoading(false);
@@ -60,7 +60,7 @@ export default function Country(): JSX.Element {
   return (
     <main>
       {isLoading ? (
-        <h2 animate={{ opacity: 1 }} className="searching">
+        <h2 className="searching">
           Searching...
         </h2>
       ) : (

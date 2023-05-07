@@ -37,7 +37,7 @@ export default function AllCountries(props: AllCountriesProps) {
               <section className="image-container">
                 <img
                   className="image"
-                  src={flags ? flags.svg : flags.png}
+                  src={flags ? flags.svg : flags}
                   alt=""
                 />
               </section>
