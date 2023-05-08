@@ -7,7 +7,7 @@ interface FilteredCountriesProps {
   filtered: Country[];
 }
 
-export default function FilteredCountries(props: FilteredCountriesProps) {
+export default function FilteredState(props: FilteredCountriesProps) {
   return (
     <section className="container-block">
       {props.foundFilter ? (

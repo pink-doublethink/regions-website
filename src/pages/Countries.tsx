@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import AllCountries from "../components/State";
-import FilteredCountries from "../components/FilteredState";
+import States from "../components/States";
+import FilteredState from "../components/FilteredState";
 import Search from "../components/Search";
 import { Country } from "../components/types";
 
@@ -67,9 +67,9 @@ export default function Countries(): JSX.Element {
             setCountries={setCountries}
           />
           {searchInput.length > 0 ? (
-            <FilteredCountries filtered={filtered} foundFilter={foundFilter} />
+            <FilteredState filtered={filtered} foundFilter={foundFilter} />
           ) : (
-            <AllCountries countries={countries} />
+            <States countries={countries} />
           )}
         </>
       )}

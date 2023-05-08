@@ -9,7 +9,7 @@ interface Props {
   setCountries: React.Dispatch<React.SetStateAction<any[]>>;
 }
 
-const FilterRegions: FC<Props> = ({ setCountries }) => {
+const Regions: FC<Props> = ({ setCountries }) => {
   const [isVisible, setVisibility] = useState<boolean>(false);
   const [activeRegion, setActiveRegion] = useState<string>("");
 
@@ -84,4 +84,4 @@ const FilterRegions: FC<Props> = ({ setCountries }) => {
   );
 };
 
-export default FilterRegions;
+export default Regions;

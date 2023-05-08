@@ -1,5 +1,5 @@
 import { FaSearch } from "react-icons/fa";
-import FilterRegions from "./Regions";
+import Regions from "./Regions";
 import { Dispatch, SetStateAction } from "react";
 
 type SearchProps = {
@@ -22,7 +22,7 @@ const Search = (props: SearchProps) => {
           onChange={(e) => props.searchCountries(e.target.value)}
         />
       </section>
-      <FilterRegions setCountries={props.setCountries} />
+      <Regions setCountries={props.setCountries} />
     </article>
   );
 };

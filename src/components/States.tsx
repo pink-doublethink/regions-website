@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Country } from "./types";
 
-interface AllCountriesProps {
+interface States {
   countries: Country[];
 }
 
-export default function AllCountries(props: AllCountriesProps) {
+export default function States(props: States) {
   return (
     <section className="container-block">
       {props.countries.map(
