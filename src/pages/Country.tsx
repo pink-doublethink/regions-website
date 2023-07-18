@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 
 interface Country {
   name: string;
@@ -26,7 +26,7 @@ export default function Country(): JSX.Element {
   const [country, setCountry] = useState<Country | null>(null);
   const [borderCountries, setBorderCountries] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const { name } = useParams<{ name: any}>();
+  const { name } = useParams<{ name: any }>();
 
   useEffect(() => {
     window.scroll(0, 0);
@@ -60,9 +60,7 @@ export default function Country(): JSX.Element {
   return (
     <main>
       {isLoading ? (
-        <h2 className="searching">
-          Searching...
-        </h2>
+        <h2 className="searching">Searching...</h2>
       ) : (
         <AnimatePresence>
           <Link to="/" className="back-link">
@@ -98,8 +96,7 @@ export default function Country(): JSX.Element {
                     <span>Native Name:</span> {country?.nativeName}
                   </li>
                   <li>
-                    <span>Population:</span>{" "}
-                    {country?.population.toLocaleString()}
+                    <span>Population:</span> {country?.population.toLocaleString()}
                   </li>
                   <li>
                     <span>Region:</span> {country?.region}
@@ -127,11 +124,7 @@ export default function Country(): JSX.Element {
                 <p className="border-countries-title">Border Countries:</p>
                 {borderCountries?.length ? (
                   borderCountries.map((country, index) => (
-                    <Link
-                      key={index}
-                      className="border-country"
-                      to={`/${country}`}
-                    >
+                    <Link key={index} className="border-country" to={`/${country}`}>
                       <motion.div
                         initial={{
                           opacity: 0,

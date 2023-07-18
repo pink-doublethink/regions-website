@@ -1,9 +1,9 @@
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Countries from "../pages/Countries";
-import Country from "../pages/Country";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Countries from '../pages/Countries';
+import Country from '../pages/Country';
 import Header from '../components/Header';
-import "./styles.css";
-const App: React.FC= () => {
+import './styles.css';
+const App: React.FC = () => {
   return (
     <Router>
       <Header />
@@ -12,7 +12,7 @@ const App: React.FC= () => {
         <Route path="/" element={<Countries />} />
       </Routes>
     </Router>
-  )
-}
+  );
+};
 
-export default App
+export default App;

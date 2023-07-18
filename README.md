@@ -21,7 +21,9 @@ Clone the repository on your computer. Then run the following commands from the 
 | :--------------------- | :------------------------------------------------- |
 | `pnpm install`          | Installs dependencies                              |
 | `pnpm start`          | Starts local dev server at `localhost:5173`        |
-| `pnpm build`        | Build your production site to `./dist/   
+| `pnpm build`        | Build your production site to `./dist/`            |
+| `pnpm test`         | Builds and installs a custom eslint plugin and runs eslint on the source files using a custom configuration |
+| `pnpm format`       | Formats the source files using prettier             |
 
 ----
 ### Contributing

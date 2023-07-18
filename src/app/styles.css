@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 :root {
-  --body-font: "Nunito Sans", sans-serif;
+  --body-font: 'Nunito Sans', sans-serif;
   --light-mode-text: hsl(200, 15%, 8%);
   --light-mode-background: hsl(0, 0%, 98%);
   --light-mode-input: hsl(0, 0%, 52%);
@@ -27,13 +27,12 @@ a {
   text-decoration: none;
   color: var(--light-mode-text);
 }
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
   display: none;
 }
-
 
 nav {
   display: flex;
@@ -67,7 +66,6 @@ main {
   font-weight: 600;
   margin-top: 0.5rem;
 }
-
 
 .search-section {
   display: flex;
@@ -109,7 +107,7 @@ main {
   font-family: var(--body-font);
 }
 
-.input-block input[type="search"] {
+.input-block input[type='search'] {
   font-size: 0.9rem;
   color: var(--light-mode-text);
   padding-left: 5rem;
@@ -150,7 +148,7 @@ details > summary::-webkit-details-marker {
 }
 
 .select-region summary:after {
-  content: "";
+  content: '';
   display: inline-block;
   width: 0.4rem;
   height: 0.4rem;
@@ -193,7 +191,6 @@ details > summary::-webkit-details-marker {
   color: var(--dark-mode-bg);
   transition: all ease-in-out 0.3s;
 }
-
 
 .container-block {
   display: grid;
@@ -238,7 +235,6 @@ details > summary::-webkit-details-marker {
   height: 100%;
   object-fit: cover;
 }
-
 
 .back-link {
   margin-top: 4.5rem;
@@ -348,7 +344,6 @@ details > summary::-webkit-details-marker {
   margin-top: 5%;
 }
 
-
 .dark {
   background-color: var(--dark-mode-bg);
   color: var(--white);
@@ -380,7 +375,6 @@ details > summary::-webkit-details-marker {
 .dark .select-region summary:after {
   color: var(--white);
 }
-
 
 @media (hover: hover) {
   .region-list li:hover,

@@ -1,6 +1,6 @@
-import { FaSearch } from "react-icons/fa";
-import Regions from "./Regions";
-import { Dispatch, SetStateAction } from "react";
+import { FaSearch } from 'react-icons/fa';
+import Regions from './Regions';
+import { Dispatch, SetStateAction } from 'react';
 
 type SearchProps = {
   searchInput: string;

@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { Country } from "./types";
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Country } from './types';
 
 interface FilteredCountriesProps {
   foundFilter: boolean;
@@ -11,19 +11,8 @@ export default function FilteredState(props: FilteredCountriesProps) {
   return (
     <section className="container-block">
       {props.foundFilter ? (
-        props.filtered?.map(({
-          name,
-          population,
-          region,
-          capital,
-          flags,
-          index
-        }: Country) => (
-          <Link
-            key={name}
-            to={`/${name.toLowerCase().replace(/\s/g, "%20")}`}
-            className="inside-container"
-          >
+        props.filtered?.map(({ name, population, region, capital, flags, index }: Country) => (
+          <Link key={name} to={`/${name.toLowerCase().replace(/\s/g, '%20')}`} className="inside-container">
             <motion.div
               initial={{
                 opacity: 0,
@@ -49,8 +38,7 @@ export default function FilteredState(props: FilteredCountriesProps) {
                 <section className="info-block">
                   <h2 className="info-block-h2">{name}</h2>
                   <p className="p">
-                    <span className="category">Population:</span>{" "}
-                    {population.toLocaleString()}
+                    <span className="category">Population:</span> {population.toLocaleString()}
                   </p>
                   <p className="p">
                     <span className="category">Region:</span> {region}

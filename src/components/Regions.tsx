@@ -1,4 +1,4 @@
-import { useState, FC } from "react";
+import { useState, FC } from 'react';
 
 interface Region {
   label: string;
@@ -11,28 +11,28 @@ interface Props {
 
 const Regions: FC<Props> = ({ setCountries }) => {
   const [isVisible, setVisibility] = useState<boolean>(false);
-  const [activeRegion, setActiveRegion] = useState<string>("");
+  const [activeRegion, setActiveRegion] = useState<string>('');
 
   const regions: Region[] = [
     {
-      label: "All",
-      name: "all",
+      label: 'All',
+      name: 'all',
     },
     {
-      label: "Africa",
-      name: "africa",
+      label: 'Africa',
+      name: 'africa',
     },
-    { label: "Americas", name: "americas" },
+    { label: 'Americas', name: 'americas' },
     {
-      label: "Asia",
-      name: "asia",
+      label: 'Asia',
+      name: 'asia',
     },
-    { label: "Europe", name: "europe" },
-    { label: "Oceania", name: "oceania" },
+    { label: 'Europe', name: 'europe' },
+    { label: 'Oceania', name: 'oceania' },
   ];
 
   const fetchRegion = async (regionName: string): Promise<void> => {
-    if (regionName === "all") {
+    if (regionName === 'all') {
       const url = `https://restcountries.com/v2/all`;
       const response = await fetch(url);
       const data = await response.json();
@@ -54,14 +54,9 @@ const Regions: FC<Props> = ({ setCountries }) => {
   };
 
   return (
-    <section
-      className={isVisible ? "active-regions select-region" : "select-region"}
-      id="regions"
-    >
+    <section className={isVisible ? 'active-regions select-region' : 'select-region'} id="regions">
       <summary onClick={addDropdown}>
-        {activeRegion === "All" || !activeRegion
-          ? "Filter by Region"
-          : activeRegion}
+        {activeRegion === 'All' || !activeRegion ? 'Filter by Region' : activeRegion}
       </summary>
       {isVisible ? (
         <div className="region-list">
