@@ -14,6 +14,8 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "noUnusedLocals": true,
+    "exactOptionalPropertyTypes": true,
     "noEmit": true,
     "jsx": "react-jsx"
   },
