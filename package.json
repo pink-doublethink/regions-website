@@ -10,8 +10,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "test": "pnpm --prefix eslint-plugin-custom-rules run build && pnpm i -D file:eslint-plugin-custom-rules && eslint --config ./.eslintrc.js ./src",
+    "lint": "pnpm --prefix eslint-plugin-custom-rules run build && pnpm i -D file:eslint-plugin-custom-rules && eslint --config ./.eslintrc.js ./src",
     "format": "prettier 'src/**/*.{js,jsx,ts,tsx,css,scss}' --write"
   },
   "dependencies": {
